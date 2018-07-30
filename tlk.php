@@ -6,7 +6,7 @@ while (true) {
 	$tlk = tlk(8009521);
 	if (!empty($tlk)) {
 		sendMsg([
-			'bot' => 'Sean',
+			'bot' => 'ais3',
 			'chat_id' => '@ais3_2018',
 			'text' => $tlk,
 			'parse_mode' => 'HTML'
@@ -16,7 +16,7 @@ while (true) {
 	$tlk = tlk(87446);
 	if (!empty($tlk)) {
 		sendMsg([
-			'bot' => 'Sean',
+			'bot' => 'ais3',
 			'chat_id' => -1001054375580,
 			'text' => $tlk,
 			'parse_mode' => 'HTML'
@@ -40,7 +40,7 @@ function tlk($tlkId) {
 		$name = $msg['nickname'];
 		$name = enHTML($name);
 
-		if ($name == 'Telegram')
+		if (substr($name, -5) == ' (TG)')
 			continue;
 
 		$body = $msg['body'];
